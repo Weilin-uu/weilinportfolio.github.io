@@ -53,7 +53,7 @@ export default function App() {
         {/* --- 左半部分：文字区域 --- */}
         <div className="w-1/2 h-full border-r border-black pt-[64px] pl-[48px] flex flex-col overflow-hidden">
           {/* 大标题 */}
-          <h2 className="text-h3 md:text-h2 lg:text-h1 tracking-tighter leading-[0.9] mb-[64px]">
+          {/* <h2 className="text-h3 md:text-h2 lg:text-h1 tracking-tighter leading-[0.9] mb-[64px]"> */}
             Hello! I'm Weilin.
           </h2>
 
