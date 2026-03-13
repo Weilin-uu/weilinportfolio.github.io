@@ -10,12 +10,12 @@ const navSections = [
 ];
 
 const images = [
-  { img: "/swiftfood.png", title: "Multi-sided Marketplace Platform for Food Delivery" },
-  { img: "/healthtech.png", title: "AI-powered Health Tech App" },
-  { img: "/volunteer.png", title: "AR Future Volunteer System Design" },
-  { img: "/vrlibrary.png", title: "Future VR Library of Language Preservation" },
-  { img: "/cardgame.png", title: "Gamified System for Cross-Cultural Communication" },
-  { img: "/foldablerobot.png", title: "Foldable Robot" },
+  { img: "/weilinportfolio.github.io/swiftfood.png", title: "Multi-sided Marketplace Platform for Food Delivery" },
+  { img: "/weilinportfolio.github.io/healthtech.png", title: "AI-powered Health Tech App" },
+  { img: "/weilinportfolio.github.io/volunteer.png", title: "AR Future Volunteer System Design" },
+  { img: "/weilinportfolio.github.io/vrlibrary.png", title: "Future VR Library of Language Preservation" },
+  { img: "/weilinportfolio.github.io/cardgame.png", title: "Gamified System for Cross-Cultural Communication" },
+  { img: "/weilinportfolio.github.io/foldablerobot.png", title: "Foldable Robot" },
 ];
 
 export default function App() {
