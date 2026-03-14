@@ -14,7 +14,7 @@ export default function AboutMe() {
     },
     {
       category: "Development",
-      items: ["HTML", "CSS", "React", "TypeScript", "Tailwind CSS"],
+      items: ["HTML", "CSS", "React", "TypeScript"],
     },
     {
       category: "Methods",
@@ -39,9 +39,9 @@ export default function AboutMe() {
       <div className="w-full flex flex-col md:flex-row border-b border-black">
         <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-black">
           <img
-            src="/me.jpg"
+            src="/weilinportfolio.github.io/me.jpg"
             alt="Weilin"
-            className="w-full h-full object-cover max-h-[70vh]"
+            className="w-full h-full object-cover max-h-[70vh] aspect-ratio-[4/3]"
           />
         </div>
         <div className="w-full md:w-1/2 flex flex-col justify-end pt-[40px] md:pt-[64px] pl-[24px] md:pl-[48px] pr-[24px] md:pr-[48px] pb-[40px] md:pb-[64px]">
@@ -60,7 +60,7 @@ export default function AboutMe() {
       </div>
 
       <div className="w-full border-b border-black pt-[40px] md:pt-[64px] pl-[24px] md:pl-[48px] pr-[24px] md:pr-[48px] pb-[40px] md:pb-[64px]">
-        <h3 className="font-sans text-sm tracking-widest uppercase opacity-40 mb-[40px]">
+        <h3 className="font-sans text-sm tracking-widest uppercase opacity-40 mb-[24px]">
           Skills
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[40px]">
@@ -90,13 +90,13 @@ export default function AboutMe() {
         </h3>
         <div className="w-full border border-black mb-[32px] overflow-hidden">
           <iframe
-            src="/Weilin_Sun_Product_Designer.pdf"
+            src="/weilinportfolio.github.io/Weilin_Sun_Product_Designer.pdf"
             className="w-full h-[60vh] md:h-[80vh]"
             title="Weilin CV"
           />
         </div>
         <a
-          href="/Weilin_Sun_Product_Designer.pdf"
+          href="/weilinportfolio.github.io/Weilin_Sun_Product_Designer.pdf"
           download
           className="inline-flex items-center gap-3 border border-black px-6 py-4 font-sans text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors w-fit"
         >
