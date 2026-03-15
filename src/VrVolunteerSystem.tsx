@@ -165,15 +165,11 @@ const css = `
     max-width: 1140px;
     margin: 0 auto;
   }
-  .oceanus-video-wrap video { width: 100%; height: 100%; object-fit: cover; }
-  .oceanus-video-caption {
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.35);
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 20px clamp(24px, 5vw, 64px) 40px;
-    text-transform: uppercase;
+   .oceanus-video-wrap iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
   }
 
   /* ── Two col ── */
@@ -461,18 +457,18 @@ export default function VrVolunteerSystem() {
 
         {/* ── Video ── */}
         <section className="oceanus-video-section">
-          <div className="oceanus-video-wrap reveal">
-            <video
-              src="/weilinportfolio.github.io/videos/volunteervideo.mp4"
-              controls
-              preload="metadata"
-             // poster={img("volunteer.png")}
-            />
-          </div>
-          <div className="oceanus-video-caption">
-            Full scenario walkthrough — AR vision prototype demonstrating the OCEANUS volunteer experience during a flood response
-          </div>
-        </section>
+  <div className="oceanus-video-wrap reveal">
+    <iframe
+      src="https://www.youtube.com/embed/wKhigvu9ygY"
+      title="OCEANUS volunteer experience"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+  <div className="oceanus-video-caption">
+    Full scenario walkthrough — AR vision prototype demonstrating the OCEANUS volunteer experience during a flood response
+  </div>
+</section>
 
         {/* ── Research ── */}
         <section className="oceanus-section">
