@@ -13,12 +13,12 @@ const navSections = [
 ];
 
 const images = [
-  { img: "/weilinportfolio.github.io/swiftfood.png",     title: "Multi-sided Platform for Food Delivery" },
-  { img: "/weilinportfolio.github.io/healthtech.png",    title: "AI-powered Health Tech App" },
-  { img: "/weilinportfolio.github.io/volunteer.png",     title: "AR Future Volunteer System Design" },
-  { img: "/weilinportfolio.github.io/vrlibrary.png",     title: "Future VR Library of Language Preservation" },
-  { img: "/weilinportfolio.github.io/cardgame.png",      title: "Cross-Cultural Gamified System" },
-  { img: "/weilinportfolio.github.io/foldablerobot.png", title: "Foldable Robot" },
+  { img: "/weilinportfolio.github.io/swiftfood.png",     title: "...", slug: "swiftfood" },
+  { img: "/weilinportfolio.github.io/healthtech.png",    title: "...", slug: "healthtech" },
+  { img: "/weilinportfolio.github.io/volunteer.png",     title: "...", slug: "volunteer" },
+  { img: "/weilinportfolio.github.io/vrlibrary.png",     title: "...", slug: "vrlibrary" },
+  { img: "/weilinportfolio.github.io/cardgame.png",      title: "...", slug: "cardgame" },
+  { img: "/weilinportfolio.github.io/foldablerobot.png", title: "...", slug: "foldablerobot" },
 ];
 
 const AUTO_DELAY         = 5000; // 自动切换间隔（ms）

@@ -1,5 +1,7 @@
 import { useEffect, useMemo } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import ProjectCards from "./components/ProjectCards";
 
 const projectSections = [
   {
@@ -113,64 +115,6 @@ const projectSections = [
   },
 ];
 
-function ProjectCard({ project }) {
-  return (
-    <Link
-      to={`/project/${project.slug}`}
-      className="group block border-r border-b border-black first:border-l"
-      aria-label={project.title}
-    >
-      <div className="relative flex h-full min-h-[420px] flex-col bg-my-bg">
-
-        {project.year && (
-          <div className="absolute right-5 top-5 font-sans text-[12px] tracking-[0.08em] text-black">
-            {project.year}
-          </div>
-        )}
-
-        <div className="px-5 pt-5 md:px-6 md:pt-6">
-          {project.chips?.[0] && (
-            <span className="inline-flex rounded-full border border-black px-3 py-1 font-sans text-[10px] uppercase tracking-[0.12em] text-black">
-              {project.chips[0]}
-            </span>
-          )}
-        </div>
-
-        <div className="flex flex-1 items-center justify-center px-5 py-8 md:px-8 md:py-10">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="max-h-[260px] w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </div>
-
-        <div className="mt-auto flex items-end justify-between gap-4 px-5 pb-5 pt-2 md:px-6 md:pb-6">
-          <div className="min-w-0 flex-1">
-            <h3 className="font-sans text-[14px] uppercase tracking-[0.04em] leading-[1.2] text-black md:text-[15px]">
-              {project.title}
-            </h3>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.chips.slice(1).map((chip) => (
-                <span
-                  key={chip}
-                  className="rounded-full border border-black px-3 py-1 font-sans text-[10px] uppercase tracking-[0.12em] text-black/70"
-                >
-                  {chip}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex-shrink-0 rounded-full border border-black px-4 py-2 font-sans text-[11px] font-medium uppercase tracking-[0.08em] text-black transition-colors duration-200 group-hover:bg-black group-hover:text-white">
-            View
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
 export default function ProjectsPage() {
   const location = useLocation();
 
@@ -194,24 +138,13 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-my-bg text-black flex flex-col font-serif">
-
-      <header className="h-[64px] max-md:h-[48px] w-full flex border-b border-black flex-shrink-0 z-10">
-        <div className="w-full flex items-center pl-[48px] max-md:pl-[24px]">
-          <Link
-            to="/"
-            className="text-sm tracking-widest uppercase font-sans cursor-pointer hover:opacity-50 transition-opacity"
-          >
-            Home
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <div className="flex-1 mx-auto w-full max-w-[1920px] pb-[56px] pt-[40px] md:pb-[72px] md:pt-[56px]">
-
         <div className="mb-[0px] border-b border-black px-[24px] pb-[24px] md:px-[36px] md:pb-[32px] xl:px-[48px]">
           <p className="font-sans text-[12px] uppercase tracking-[0.18em] text-black/45">
             Selected Work
-          </p >
+          </p>
 
           <h1 className="mt-[14px] text-[clamp(2.5rem,5vw,6rem)] tracking-tighter leading-[0.9]">
             Projects
@@ -233,13 +166,12 @@ export default function ProjectsPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                 {section.projects.map((project) => (
-                  <ProjectCard key={project.slug} project={project} />
+                  <ProjectCards key={project.slug} project={project} />
                 ))}
               </div>
             </section>
           ))}
         </div>
-
       </div>
     </div>
   );
