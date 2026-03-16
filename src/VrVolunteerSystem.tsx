@@ -97,7 +97,7 @@ const css = `
   .oceanus-container {
    max-width: calc(100% - 96px); /* 48px * 2 */
    margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 48px);
+  padding: 0;
   }
   .oceanus-section {
     padding: clamp(64px, 10vw, 120px) 0;
@@ -328,9 +328,10 @@ const css = `
   @media (max-width: 768px) {
     .oceanus-hero {
       min-height: unset;
-      display: block;
-      position: static;
+      max-width: 100%;
+      padding: 0 8px;
     }
+
     .oceanus-hero-img {
       position: static;
       width: 100%;
