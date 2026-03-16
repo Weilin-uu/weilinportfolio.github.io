@@ -140,26 +140,20 @@ export default function ProjectsPage() {
     <div className="min-h-screen w-full overflow-x-hidden bg-my-bg text-black flex flex-col font-serif">
       <Header />
 
-      <div className="flex-1 mx-auto w-full max-w-[1920px] pb-[56px] pt-[40px] md:pb-[72px] md:pt-[56px]">
-        <div className="mb-[0px] border-b border-black px-[24px] pb-[24px] md:px-[36px] md:pb-[32px] xl:px-[48px]">
-          <p className="font-sans text-[12px] uppercase tracking-[0.18em] text-black/45">
-            Selected Work
-          </p>
-
-          <h1 className="mt-[14px] text-[clamp(2.5rem,5vw,6rem)] tracking-tighter leading-[0.9]">
-            Projects
-          </h1>
-        </div>
-
+      <div className="flex-1 mx-auto w-full max-w-[1920px] pb-[56px] md:pb-[72px] ">       
         <div className="space-y-0">
           {projectSections.map((section) => (
             <section
               key={section.id}
               id={section.id}
-              className="scroll-mt-10 border-b border-black"
+              className="scroll-mt-10 "
             >
-              <div className="border-b border-black px-[24px] py-[18px] md:px-[36px] md:py-[22px] xl:px-[48px]">
-                <h2 className="font-serif text-[clamp(2rem,3.2vw,3.5rem)] leading-[0.95] tracking-tighter">
+              <div className="border-b border-black px-[24px] pb-[24px] md:pb-[48px] pt-[24px] md:pt-[48px] py-[2px] md:px-[36px] md:py-[2px] xl:px-[48px]">
+                  <p className="font-futura-light text-[12px] uppercase tracking-[0.18em] text-black/45 mb-[8px]">
+                     Selected Work
+                  </p>
+                
+                <h2 className="font-inria-serif-rregular text-[clamp(2rem,3.2vw,3.5rem)] leading-[0.95] tracking-tighter">
                   {section.title}
                 </h2>
               </div>

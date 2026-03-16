@@ -1,44 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import "tailwindcss";
-
-/* 1. 在这里定义你的“名字”变量 */
-@theme {
-  /* 定义字号名字 */
-  --text-h1: 96px;
-  --text-h1--line-height: 1.2;
-
-  --text-h2: 48px;
-  --text-h2--line-height: 1.3;
-
-  --text-h3: 32px;
-  --text-h3--line-height: 1.3;
-
-  --text-body1: 18px;
-  --text-body1--line-height: 1.2;
-
-  --text-body2: 14px;
-  --text-body2--line-height: 1.2;
-
-  --text-caption: 12px;
-  --text-caption--line-height: 1.2;
-
-  /* 定义颜色名字 */
-  --color-my-bg: #F8F7F3;
-  --color-brand: #63C2BD; /* 这里换成你喜欢的品牌色 */
-
-  --font-serif: "Inria Serif", serif;
-  --font-sans: "Futura-Medium", sans-serif;
-  --font-futura-medium: "Futura-Medium", sans-serif;
-  --font-futura-heavy: "Futura-Heavy", sans-serif;
+@font-face {
+  font-family: "Inria Serif";
+  src: url("./fonts/InriaSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* 2. 这里的基础底色保持不变 */
-@layer base {
-  html {
-    font-family: "Inria Serif", "Futura-Medium", "Futura-Heavy", serif;
-    background-color: var(--color-my-bg);
-    color: #1A1A1A;
-  }
+@font-face {
+  font-family: "Inria Serif";
+  src: url("./fonts/InriaSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: url("./fonts/InriaSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -49,4 +27,48 @@
 @font-face {
   font-family: "Futura-Heavy";
   src: url("./fonts/FuturaCyrillicHeavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Futura-Light";
+  src: url("./fonts/FuturaCyrillicLight.ttf") format("truetype");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --color-my-bg: #F8F7F3;
+  --color-brand: #63C2BD;
+  --color-black: #131313;
+  --color-grey-1: #595959;
+  --color-grey-2: #737373;
+
+  --font-serif: "Inria Serif", serif;
+  --font-sans: "Futura-Medium", sans-serif;
+  --font-futura-medium: "Futura-Medium", sans-serif;
+  --font-futura-heavy: "Futura-Heavy", sans-serif;
+  --font-futura-light: "Futura-Light", sans-serif;
+  --font-inria-serif: "Inria Serif", serif;
+  --font-inria-serif-bold: "Inria Serif Bold", serif;
+
+  --text-h1: 96px;
+  --text-h1--line-height: 1.2;
+  --text-h2: 48px;
+  --text-h2--line-height: 1.3;
+  --text-h3: 32px;
+  --text-h3--line-height: 1.3;
+  --text-body1: 18px;
+  --text-body1--line-height: 1.2;
+  --text-body2: 14px;
+  --text-body2--line-height: 1.2;
+  --text-caption: 12px;
+  --text-caption--line-height: 1.2;
+}
+
+@layer base {
+  html {
+    font-family: "Inria Serif", serif;
+    background-color: var(--color-my-bg);
+    color: #1A1A1A;
+  }
 }

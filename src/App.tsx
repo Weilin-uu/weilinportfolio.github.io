@@ -43,7 +43,7 @@ function YearCounter() {
   return (
     <span
       ref={labelRef}
-      className="font-sans text-sm tracking-widest"
+      className="font-futura-light text-sm tracking-widest"
       style={{ color: "black" }}
     >
       Portfolio 2021–2021
@@ -82,7 +82,7 @@ function SlidingTitle({ title, incomingTitle, isAnimating }) {
     <div className="relative self-stretch flex-1 overflow-hidden">
       {!isAnimating ? (
         <div className="absolute inset-0 flex items-center">
-          <span className="font-sans text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
+          <span className="font-futura-light text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
             {title}
           </span>
         </div>
@@ -94,7 +94,7 @@ function SlidingTitle({ title, incomingTitle, isAnimating }) {
             transition={{ duration: ANIMATION_DURATION, ease: "linear" }}
             className="absolute inset-0 flex items-center"
           >
-            <span className="font-sans text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
+            <span className="font-futura-light text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
               {title}
             </span>
           </motion.div>
@@ -104,7 +104,7 @@ function SlidingTitle({ title, incomingTitle, isAnimating }) {
             transition={{ duration: ANIMATION_DURATION, ease: "linear" }}
             className="absolute inset-0 flex items-center"
           >
-            <span className="font-sans text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
+            <span className="font-futura-light text-sm leading-[1.15] tracking-widest uppercase whitespace-normal break-words">
               {incomingTitle}
             </span>
           </motion.div>
@@ -221,7 +221,7 @@ export default function App() {
       <header className="h-[64px] max-md:h-[48px] w-full flex border-b-2 border-black flex-shrink-0 z-10">
 
         {/* 左：Home */}
-        <div className="w-1/2 max-md:w-full flex items-center pl-[48px] max-md:pl-[24px] border-r-2 border-black max-md:border-r-0">
+        <div className="w-1/2 max-md:bg-my-bg max-md:w-full flex items-center pl-[48px] max-md:pl-[24px] border-r-1 border-black max-md:border-r-0">
           <span
             className="text-sm tracking-widest uppercase font-sans cursor-pointer transition-colors duration-200 hover:text-brand"
           >
@@ -230,7 +230,7 @@ export default function App() {
         </div>
 
         {/* 右：项目标题 banner（桌面） */}
-        <div className="w-1/2 bg-black text-white items-center justify-between px-[48px] max-md:hidden flex overflow-hidden">
+        <div className="w-1/2 bg-black text-white items-center justify-between px-[32px] max-md:hidden flex overflow-hidden">
           <SlidingTitle
             title={images[currentIndex].title}
             incomingTitle={images[incomingIndex].title}
@@ -250,37 +250,39 @@ export default function App() {
 
 
       {/* ── 主内容区 ─────────────────────────── */}
-      <div className="flex-1 flex flex-row max-md:flex-col w-full max-w-[1920px] mx-auto">
+      <div className="flex-1 flex flex-row max-md:flex-col w-full max-w-[1920px] mx-auto ">
 
         {/* ── 左栏 ──────────────────────────── */}
         <div
           className="
             w-1/2 max-md:w-full
-            border-r-2 border-black max-md:border-r-0
+            border-r-2 border-black max-md:border-r-0 
             flex flex-col
-            pt-[80px] xl:pt-[64px] max-md:pt-[6vw]
+            pt-[80px] xl:pt-[48px] max-md:pt-[4vw]
             pl-[48px] max-md:pl-[24px]
             pr-[48px] max-md:pr-[24px]
             pb-[48px] max-md:pb-[6vw]
+            max-md:z-[1] max-md:relative
           "
         >
           {/* 年份计数（纯文字动画） */}
-          <div className="mb-[16px] max-md:mb-[3vw]">
+          <div className="mb-[16px] max-md:mb-[3vw] max-md:fixed max-md:top-[10%]">
             <YearCounter />
           </div>
 
           {/* 大标题 */}
-          <h1 className="font-futura-bold text-[clamp(3rem,6vw,7rem)] tracking-tighter leading-[0.88] mb-[24px] max-md:mb-[4vw]">
+          <h1 className="font-futura-bold text-[clamp(3rem,6vw,7rem)] tracking-tighter leading-[0.88] mb-[18px] max-md:mb-[3vw] max-md:fixed max-md:top-[14%]">
             Weilin Sun
           </h1>
 
           {/* Pill 标签 */}
-          <div className="flex flex-wrap gap-[10px] mb-[28px] max-md:mb-[4vw]">
+          <div className="flex flex-wrap gap-[10px] mb-[28px] max-md:mb-[2vw] max-md:fixed max-md:top-[23%]">
             <span
               className="
-                font-futura-medium text-[13px] tracking-widest
-                border border-black rounded-full
-                px-[14px] py-[6px]
+                font-futura-heavy text-[14px] md:text-[16px] tracking-widest
+                border-2 border-black rounded-full
+                max-md:border-1 max-md:px-[10px]
+                px-[12px] py-[4px]
                 cursor-default
                 text-black
               "
@@ -289,11 +291,12 @@ export default function App() {
             </span>
             <span
               className="
-                font-futura-medium text-[13px] tracking-widest
-                border border-black rounded-full
-                px-[14px] py-[6px]
+                font-futura-heavy text-[14px] md:text-[16px] tracking-widest
+                border-2 border-grey-2 rounded-full
+                max-md:border-1 max-md:px-[10px]
+                px-[12px] py-[4px]
                 cursor-default
-                text-[#555555]
+                text-grey-2
               "
             >
               London/ Remote
@@ -301,7 +304,7 @@ export default function App() {
           </div>
 
           {/* 简介文字 */}
-          <div className="font-futura-medium text-[clamp(12px,1.1vw,15px)] leading-[1.55] w-full opacity-80 mb-[56px] max-md:mb-[5vw]">
+          <div className="font-futura-light text-[clamp(12px,1.1vw,15px)] leading-[1.55] w-full opacity-80 mb-[56px] max-md:mb-[30vw] max-md:fixed max-md:top-[30%]">
             <p className="mb-0">I design futures that are grounded in reality.</p>
             <p className="mb-0">
               I have a background in Material Science and Engineering, I approach design through both
@@ -319,13 +322,13 @@ export default function App() {
               {navSections.map((section) => (
                 <li
                   key={section.id}
-                  className="flex items-baseline cursor-pointer"
+                  className="flex items-center cursor-pointer"
                   onClick={() => handleNav(section.target)}
                 >
-                  <span className="font-sans text-[12px] mr-3 w-[24px] opacity-30 text-black flex-shrink-0">
+                  <span className="font-futura-heavy text-[14px] mr-3 w-[18px] opacity-30 text-black flex-shrink-0">
                     {section.id}
                   </span>
-                  <span className="font-futura-heavy text-[clamp(1.4rem,2.8vw,2.5rem)] leading-none text-black transition-colors duration-200 hover:text-brand inline-block">
+                  <span className="font-futura-medium text-[clamp(1.4rem,2.8vw,2.5rem)] leading-none text-black transition-colors duration-200 hover:text-brand inline-block">
                     {section.label}
                   </span>
                 </li>
@@ -334,16 +337,16 @@ export default function App() {
           </nav>
 
           {/* 底部链接（桌面） */}
-          <div className="max-md:hidden mt-auto pt-[40px] flex gap-[24px]">
+          <div className="max-md:hidden mt-auto pt-[64px] flex gap-[24px]">
             {[
-              { label: "Linkedin", href: "#" },
-              { label: "Email",    href: "#" },
-              { label: "Resume",   href: "#" },
+              { label: "Linkedin", href: "https://www.linkedin.com/in/weilin-sun-429701291/" },
+              { label: "Email",    href: "mailto:sunweilin3399@gmail.com" },
+              { label: "Resume",   href: "https://weilin-uu.github.io/weilinportfolio.github.io/Weilin_Sun_Product_Designer.pdf" },
             ].map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
-                className="font-sans text-[13px] tracking-widest flex items-center gap-[4px] text-black transition-colors duration-200 hover:text-brand"
+                className="font-futura-light text-[13px] tracking-widest flex items-center gap-[4px] text-black transition-colors duration-200 hover:text-brand"
               >
                 {label}
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -356,11 +359,10 @@ export default function App() {
 
 
         {/* ── 右栏：图片轮播 ────────────────── */}
-        <div className="w-1/2 max-md:w-full flex flex-col">
-
+        <div className="w-1/2 max-md:z-[0] max-md:w-[68%] max-md:fixed max-md:top-[66%] max-md:left-[16%] max-md:-translate-y-1/2 max-md:left-0 max-md:right-0 flex flex-col">
           {/* 轮播主体 - relative 容器，移动端 nav 会 overlay 在此 */}
           <div
-            className="relative bg-gray-100 flex-1 min-h-[calc(100vh-64px)] max-md:min-h-0 overflow-hidden group"
+            className="relative flex-1 min-h-[calc(100vh-64px)] max-md:min-h-0 overflow-hidden group"
             onMouseEnter={() => { setShowArrows(true);  pauseAutoplay(); }}
             onMouseLeave={() => { setShowArrows(false); resumeAutoplayWithDelay(); }}
             onTouchStart={() => pauseAutoplay()}
@@ -377,28 +379,6 @@ export default function App() {
 
             <div className="absolute inset-0 bg-black/5 pointer-events-none" />
 
-            {/* 手机端：导航 overlay 在图片上，pointer-events-none 的遮罩不阻断按钮 */}
-            <div className="hidden max-md:block absolute inset-x-0 bottom-0 z-10 px-[24px] pb-[5vw] pt-[8vw] pointer-events-none">
-              <ul className="space-y-[2.5vw]">
-                {navSections.map((section) => (
-                  <li
-                    key={section.id}
-                    className="flex items-baseline cursor-pointer pointer-events-auto"
-                    onClick={() => handleNav(section.target)}
-                  >
-                    <span className="font-sans text-[12px] mr-4 opacity-40 text-black flex-shrink-0" style={{ backgroundColor: "var(--color-my-bg, #F5F2ED)", padding: "1px 2px" }}>
-                      {section.id}
-                    </span>
-                    <span
-                      className="font-futura-heavy text-[clamp(1.4rem,5.5vw,2.5rem)] leading-none text-black transition-colors duration-200 hover:text-brand"
-                      style={{ backgroundColor: "var(--color-my-bg, #F5F2ED)" }}
-                    >
-                      {section.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             <button
               onClick={goToPrev}
@@ -422,14 +402,35 @@ export default function App() {
           </div>
         </div>
 
+{/* 导航菜单（手机端） */}
+<nav className="hidden max-md:fixed max-md:top-[66%] max-md:block mb-[20vw] max-md:z-[1] px-[24px]">
+  <ul className="space-y-[2.5vw]">
+    {navSections.map((section) => (
+      <li
+        key={section.id}
+        className="flex items-center"
+      >
+        <span className="font-futura-heavy text-[12px] mr-4 opacity-30 text-black flex-shrink-0 bg-my-bg">
+          {section.id}
+        </span>
+        <span
+          className="font-futura-medium text-[clamp(1.3rem,5.0vw,2.2rem)] leading-none text-black transition-colors duration-200 hover:text-brand bg-my-bg cursor-pointer"
+          onClick={() => handleNav(section.target)}
+        >
+          {section.label}
+        </span>
+      </li>
+    ))}
+  </ul>
+</nav>
 
         {/* ── 手机端：底部链接 ─────────── */}
-        <div className="hidden max-md:block w-full px-[24px] pt-[4vw] pb-[8vw]">
-          <div className="flex flex-col gap-[12px]">
+        <div className="hidden max-md:block max-md:fixed max-md:top-[95%] w-full px-[24px] max-md:z-[1] pb-[8vw]">
+          <div className="flex flex-row gap-[8px]">
             {[
-              { label: "Linkedin", href: "#" },
-              { label: "Email",    href: "#" },
-              { label: "Resume",   href: "#" },
+              { label: "Linkedin", href: "https://www.linkedin.com/in/weilin-sun-429701291/" },
+              { label: "Email",    href: "mailto:sunweilin3399@gmail.com" },
+              { label: "Resume",   href: "https://weilin-uu.github.io/weilinportfolio.github.io/Weilin_Sun_Product_Designer.pdf" },
             ].map(({ label, href }) => (
               <a
                 key={label}
